@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DAL_DataAccessLayer.Properties;
+using System;
 using System.Data;
 using System.Data.SqlClient;
-using DAL_DataAccessLayer.Properties;
 
 namespace DAL_DataAccessLayer
 {

@@ -39,7 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PedidoItemNegocios.cs" />
+    <Compile Include="PedidoNegocios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL_DataAccessLayer\DAL_DataAccessLayer.csproj">
+      <Project>{161fe4e6-00a7-4ff5-9691-58a3af2e30ac}</Project>
+      <Name>DAL_DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO_DataTransferObject\DTO_DataTransferObject.csproj">
+      <Project>{2d9768fc-44ba-4cd3-9c36-8521006a3ded}</Project>
+      <Name>DTO_DataTransferObject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

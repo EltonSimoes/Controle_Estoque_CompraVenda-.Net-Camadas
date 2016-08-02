@@ -39,7 +39,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.cs" />
+    <Compile Include="ClienteColetion.cs" />
+    <Compile Include="Estoque.cs" />
+    <Compile Include="EstoqueColetion.cs" />
+    <Compile Include="EstoqueMovimentado.cs" />
+    <Compile Include="EstoqueMovimentadoColetion.cs" />
+    <Compile Include="EstoqueReservado.cs" />
+    <Compile Include="EstoqueReservadoColetion.cs" />
+    <Compile Include="Filial.cs" />
+    <Compile Include="FilialColetion.cs" />
+    <Compile Include="Fornecedor.cs" />
+    <Compile Include="FornecedorColetion.cs" />
+    <Compile Include="Operacao.cs" />
+    <Compile Include="OperacaoColetion.cs" />
+    <Compile Include="Pedido.cs" />
+    <Compile Include="PedidoColetion.cs" />
+    <Compile Include="PedidoItem.cs" />
+    <Compile Include="PedidoItemColetion.cs" />
+    <Compile Include="Pessoa.cs" />
+    <Compile Include="PessoaColetion.cs" />
+    <Compile Include="PessoaFisica.cs" />
+    <Compile Include="PessoaFisicaColetion.cs" />
+    <Compile Include="PessoaJuridica.cs" />
+    <Compile Include="PessoaJuridicaColetion.cs" />
+    <Compile Include="PessoaTipo.cs" />
+    <Compile Include="PessoaTipoColetion.cs" />
+    <Compile Include="Proco.cs" />
+    <Compile Include="ProcoColetion.cs" />
+    <Compile Include="Produto.cs" />
+    <Compile Include="ProdutoColetion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Situacao.cs" />
+    <Compile Include="SituacaoColetion.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

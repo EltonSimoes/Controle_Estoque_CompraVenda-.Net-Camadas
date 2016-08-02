@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UI_UserInterfacePresentation
 {
-    public partial class Form1 : Form
+    public partial class FrmPedidoVendaCadastrar : Form
     {
-        public Form1()
+        public FrmPedidoVendaCadastrar()
         {
             InitializeComponent();
         }
