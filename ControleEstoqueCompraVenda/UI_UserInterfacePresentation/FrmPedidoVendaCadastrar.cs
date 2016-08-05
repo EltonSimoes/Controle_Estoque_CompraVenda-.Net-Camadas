@@ -16,5 +16,11 @@ namespace UI_UserInterfacePresentation
         {
             InitializeComponent();
         }
+
+        private void btnPesquisarEmitente_Click(object sender, EventArgs e)
+        {
+            FrmFilialPesquisar frmFilialPesquisar = new FrmFilialPesquisar();
+            frmFilialPesquisar.ShowDialog();
+        }
     }
 }

@@ -30,21 +30,29 @@ namespace DAL_DataAccessLayer
         public object executarManipulacao(CommandType commandType, string nomeStoreProcedureOuTextoSql)
         {
             //Executar comando.
-            return persistenciaConexaoBanco(commandType, nomeStoreProcedureOuTextoSql, true).ExecuteScalar();
+            return persistenciaConexao(commandType, nomeStoreProcedureOuTextoSql).ExecuteScalar();
 
         }
 
         //Consultar registros
         public DataTable execuarConsulta(CommandType commandType, string nomeStoreProcedureOuTextoSql)
         {
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(persistenciaConexaoBanco(commandType, nomeStoreProcedureOuTextoSql, false));
-            //Preencher DataTable com dados e adaptador
-            DataTable dataTable = new DataTable();
-            sqlDataAdapter.Fill(dataTable);
-            return dataTable;
+            try
+            {
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(persistenciaConexao(commandType, nomeStoreProcedureOuTextoSql));
+                //Preencher DataTable com dados e adaptador
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
         }
 
-        private SqlCommand persistenciaConexaoBanco(CommandType commandType, string nomeStoreProcedureOuTextoSql, bool tipoManipulacao)
+        private SqlCommand persistenciaConexao(CommandType commandType, string nomeStoreProcedureOuTextoSql)
         {
             try
             {
@@ -53,7 +61,7 @@ namespace DAL_DataAccessLayer
                 //Abrir conexão.
                 sqlConnection.Open();
                 //Criar o comando que vai levar a informação para o banco.
-                SqlCommand sqlCommand = new SqlCommand();
+                SqlCommand sqlCommand = sqlConnection.CreateCommand();
                 //Processar comando.
                 sqlCommand.CommandType = commandType;
                 sqlCommand.CommandText = nomeStoreProcedureOuTextoSql;

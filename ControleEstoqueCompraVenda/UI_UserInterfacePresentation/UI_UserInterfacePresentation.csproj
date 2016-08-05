@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmFilialPesquisar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFilialPesquisar.Designer.cs">
+      <DependentUpon>FrmFilialPesquisar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmFilialPesquisar.resx">
+      <DependentUpon>FrmFilialPesquisar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +94,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL_BusinessLogicLayer\BLL_BusinessLogicLayer.csproj">
+      <Project>{06a6f3b0-c7e8-4267-a632-a0e6b3eeda48}</Project>
+      <Name>BLL_BusinessLogicLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO_DataTransferObject\DTO_DataTransferObject.csproj">
+      <Project>{2d9768fc-44ba-4cd3-9c36-8521006a3ded}</Project>
+      <Name>DTO_DataTransferObject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

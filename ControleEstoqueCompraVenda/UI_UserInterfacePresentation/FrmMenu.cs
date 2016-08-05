@@ -26,6 +26,7 @@ namespace UI_UserInterfacePresentation
         private void menuPedido_Click(object sender, EventArgs e)
         {
             FrmPedidoVendaCadastrar frmPedidoVenda = new FrmPedidoVendaCadastrar();
+            frmPedidoVenda.MdiParent = this;
             frmPedidoVenda.Show();
         }
     }
